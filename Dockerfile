@@ -14,6 +14,4 @@ RUN chmod +x /etc/cron.d/cron
 
 RUN crontab /etc/cron.d/cron
 
-USER mastodon
-
 CMD ["cron", "-f"]
