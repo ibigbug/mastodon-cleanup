@@ -4,7 +4,7 @@ MAINTAINER "Yuwei B <contact@yba.dev>"
 
 USER root
 
-RUN sudo apt-get update && apt-get -y install cron
+RUN apt-get update && apt-get -y install cron
 
 COPY cron /etc/cron.d/cron
 
