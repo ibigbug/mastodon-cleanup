@@ -2,7 +2,7 @@ FROM tootsuite/mastodon
 
 MAINTAINER "Yuwei B <contact@yba.dev>"
 
-RUN apt-get update && apt-get -y install cron
+RUN sudo apt-get update && apt-get -y install cron
 
 COPY cron /etc/cron.d/cron
 
