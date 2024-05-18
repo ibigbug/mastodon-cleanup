@@ -14,4 +14,6 @@ RUN chmod +x /etc/cron.d/cron
 
 RUN crontab /etc/cron.d/cron
 
+RUN printenv > /etc/environment # fixes issue where environment variables are not available in the crontab
+
 CMD ["cron", "-f"]
