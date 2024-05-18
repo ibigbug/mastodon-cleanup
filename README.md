@@ -1,5 +1,7 @@
 # mastodon-cleanup
-A Docker image that cleans up Mastodon storage as a cron
+A Docker image that cleans up Mastodon storage as a cron.
+
+Source: https://ricard.dev/improving-mastodons-disk-usage/
 
 ## Usage
 
