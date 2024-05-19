@@ -4,6 +4,8 @@ set -xe
 
 # https://ricard.dev/improving-mastodons-disk-usage/
 
+PATH=/opt/mastodon/bin/:$PATH
+
 date
 
 echo "instance version"
