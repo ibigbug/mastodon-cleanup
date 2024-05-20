@@ -10,10 +10,14 @@ COPY cron /etc/cron.d/cron
 
 COPY cleanup.sh /cleanup.sh
 
+COPY entrypoint.sh /entrypoint.sh
+
 RUN chmod +x /etc/cron.d/cron
+
+RUN chmod +x /entrypoint.sh
 
 RUN crontab /etc/cron.d/cron
 
-RUN printenv > /etc/environment # fixes issue where environment variables are not available in the crontab
+ENTRYPOINT ["/entrypoint.sh"]
 
 CMD ["cron", "-f"]
